@@ -48,7 +48,7 @@ public class LeftSmallerRightGreater {
             }
         }
         for(int i = 0;i<n;i++){
-            if(left_traversal[i]==true && right_traversal[i]==true)
+            if(left_traversal[i] && right_traversal[i])
                 return arr.get(i);
         }
         return -1;
