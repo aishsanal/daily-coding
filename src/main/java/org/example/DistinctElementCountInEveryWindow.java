@@ -3,9 +3,8 @@ package org.example;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.PriorityQueue;
 
-public class DistrictElementCountInEveryWindow {
+public class DistinctElementCountInEveryWindow {
     /**
      * Given an integer array arr[] and a number k. Find the count of distinct elements in every window of size k in the array.
      *
