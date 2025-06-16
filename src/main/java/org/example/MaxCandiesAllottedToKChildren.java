@@ -2,35 +2,31 @@ package org.example;
 
 public class MaxCandiesAllottedToKChildren {
     /**
-     Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.
+     You are given a 0-indexed integer array candies. Each element in the array denotes a pile of candies of size candies[i]. You can divide each pile into any number of sub piles, but you cannot merge two piles together.
 
-     Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.
+     You are also given an integer k. You should allocate piles of candies to k children such that each child gets the same number of candies. Each child can be allocated candies from only one pile of candies and some piles of candies may go unused.
 
-     Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
-
-     Return the minimum integer k such that she can eat all the bananas within h hours.
+     Return the maximum number of candies each child can get.
 
 
 
      Example 1:
 
-     Input: piles = [3,6,7,11], h = 8
-     Output: 4
+     Input: candies = [5,8,6], k = 3
+     Output: 5
+     Explanation: We can divide candies[1] into 2 piles of size 5 and 3, and candies[2] into 2 piles of size 5 and 1. We now have five piles of candies of sizes 5, 5, 3, 5, and 1. We can allocate the 3 piles of size 5 to 3 children. It can be proven that each child cannot receive more than 5 candies.
      Example 2:
 
-     Input: piles = [30,11,23,4,20], h = 5
-     Output: 30
-     Example 3:
-
-     Input: piles = [30,11,23,4,20], h = 6
-     Output: 23
+     Input: candies = [2,5], k = 11
+     Output: 0
+     Explanation: There are 11 children but only 7 candies in total, so it is impossible to ensure each child receives at least one candy. Thus, each child gets no candy and the answer is 0.
 
 
      Constraints:
 
-     1 <= piles.length <= 104
-     piles.length <= h <= 109
-     1 <= piles[i] <= 109
+     1 <= candies.length <= 105
+     1 <= candies[i] <= 107
+     1 <= k <= 1012
      */
     public static int maximumCandies(int[] candies, long k) {
         int maxCount = Integer.MIN_VALUE;
