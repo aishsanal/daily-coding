@@ -1,7 +1,9 @@
 package org.example;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 public class kthSmallestElement {
     /**
@@ -23,6 +25,7 @@ public class kthSmallestElement {
      1 <= k <= n
      */
     public static int kthSmallest(int[] arr, int k) {
+        /*
         // Your code here
         int low = 0;
         int high = arr.length - 1;
@@ -39,6 +42,15 @@ public class kthSmallestElement {
             }
         }
         return arr[pivot];
+         */
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        for(int num : arr) {
+            pq.offer(num);
+            if(pq.size() > k) {
+                pq.poll();
+            }
+        }
+        return pq.peek();
     }
 
     public static int partition(int[] arr, int low, int high) {
