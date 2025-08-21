@@ -24,9 +24,9 @@ public class kthElementOf2Arrays {
         int m = a.length;
         int n = b.length;
 
-        if (m < n) {
-            return kthElement(b, a, k);
-        }
+//        if (m < n) {
+//            return kthElement(b, a, k);
+//        }
 
         int l = 0;
         int r = m;
